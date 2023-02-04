@@ -20,7 +20,7 @@ echo "# leetcode"
 ./leetcode.sh $username
 echo "# lintcode"
 ./lintcode.sh $username
-github=$(./github.sh $username)
+github=$(./github_search.sh $username)
 test_github=${#github}
 if [ $test_github == 0 ]
 then 
@@ -43,14 +43,14 @@ echo "# 违禁词检测"
  ./abandon.sh $username 
 echo "# breach 数据泄漏检测"
 echo "# 此模块可能需要较好的网络和较长的检测时间，请耐心等待"
-./breach.sh $username | sed -e 's/^/# /g'
+# ./breach.sh $username | sed -e 's/^/# /g'
 echo "# 代码仓库泄漏检测"
-./find_email.sh ${username}@ 
+./find_email.sh $username@ 
 wait
-./find_email.sh @${username}
+./find_email.sh @$username
 wait
 echo "# 域名注册测试"
-./search_domain.sh $username
+# ./search_domain.sh $username
 echo "# 招聘数据测试"
 ./niuke.sh $username
 echo "# 用户名枚举邮箱"

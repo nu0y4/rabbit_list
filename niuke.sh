@@ -56,7 +56,7 @@ cat niuke_all | sed -e 's/workTime/工作时间/g' -e 's/educationInfo/学校信
 line=$(cat ./result | wc | awk '{print $1}')
 if [ $line == 1 ]
 then 
-cat | result | sed -e 's/,/ /g' | awk '{for(i=1;i<=NF;i++){print $i}}' | sed -e 's/^/# /g'
+cat result | sed -e 's/,/ /g' | awk '{for(i=1;i<=NF;i++){print $i}}' | sed -e 's/^/# /g'
 else 
 cat result | sed -e 's/^/# /g'
 fi 

@@ -26,6 +26,7 @@ for words in $all_words
 do
 echo -n "| grep $words" >> 1.sh
 done 
+echo -n "| sort | uniq" >> 1.sh
 sh ./1.sh > result
 line=$(cat result | wc | awk '{print $1}')
 echo "总计 $line 行"
@@ -37,7 +38,7 @@ registrationtime=$(echo "$result" | sed -e 's/,/ /g' | awk '{for(i=1;i<=NF;i++){
 location=$(echo "$result" | sed -e 's/,/ /g' | awk '{for(i=1;i<=NF;i++){print $i}}' | grep -i '属地' | sed -e 's/:/ /g' | awk '{print $2}')
 ip=$(echo "$result" | sed -e 's/,/ /g' | awk '{for(i=1;i<=NF;i++){print $i}}' | grep -i 'ip:' | sed -e 's/:/ /g' | awk '{print $2}')
 nickname=$(echo "$result" | sed -e 's/,/ /g' | awk '{for(i=1;i<=NF;i++){print $i}}' | grep 'nickname' | sed -e 's/:/ /g' | awk '{print $2}')
-username=$(echo "$result" | sed -e 's/,/ /g' | awk '{for(i=1;i<=NF;i++){print $i}}' | grep 'username' | sed -e 's/:/ /g' | awk '{print $2}')
+username=$(echo "$result" | sed -e 's/username:/ username:/g' -e 's/,/ /g' | awk '{for(i=1;i<=NF;i++){print $i}}' | grep 'username' | sed -e 's/:/ /g' | awk '{print $2}' )
 gender=$(echo "$result" | sed -e 's/,/ /g' | awk '{for(i=1;i<=NF;i++){print $i}}' | grep '性别' | sed -e 's/:/ /g' | awk '{print $2}')
 echo "#####################"
 echo "# username=$username"

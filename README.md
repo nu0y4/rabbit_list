@@ -27,3 +27,6 @@ $ ./rabbit_list.sh --find 实验室,北京,
 用户名开源情报：
 eg: ./rabbit_list.sh --seek-username 用户名
 后续模块大概每周提交一次更新...
+# 早期版本设想和演示：
+https://x.threatbook.com/v5/article?threatInfoID=41956
+

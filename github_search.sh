@@ -5,6 +5,7 @@ for gituser in $(cat github_list)
 do
 { 
 ./github.sh $gituser
+./github.find_more.sh  $gituser
 }&
 done
 wait 

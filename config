@@ -1,0 +1,12 @@
+# breach api 
+# 考虑到部分人可能没有这个库，但其实它已经很老了，可以不使用api查找
+# 在中国也能直接访问该网站,这个库的下载和配置很简单，如果不想注册可以自己配置自己的本地库
+# 他们有免费的api，不过数据已经烂大街了
+breach_api=
+# 最大近似用户名搜索数
+search_like_max=20
+# 最大近似用户名爬取页数
+search_like_page=3
+# github token
+github_token=
+

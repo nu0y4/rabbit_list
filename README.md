@@ -9,7 +9,7 @@ rabbit 兔子，谐音同志，用于避嫌，因为这个工具最初想法是�
 ![image](https://user-images.githubusercontent.com/43908812/216781309-f3d2f3b2-a49c-4af7-9e99-2ebd468753af.png)
 
 数据并非完全能对上，据我所知对方的github等数据是可以找到的，后续更新逐步完善，使数据更加有效。
-
+早期版本演示目前开源的模块有什么功能，详情：https://x.threatbook.com/v5/article?threatInfoID=42223
 
 更多功能集成中..敬请期待
 # 免责声明
